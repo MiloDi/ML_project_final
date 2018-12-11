@@ -1,5 +1,7 @@
 Running Entity Recognition:
 
+It is important that you have access to the spaCy model, 'en_core_web_sm' for use in the file 'build_entity_to_doc.py'. If it is not already downloaded, you can download it by running the command: "python -m spacy download en".
+
 The entity recognition is performed using two files: 'build_entity_to_doc.py' and 'use_entity_to_doc.py'.
 
 'build_entity_to_doc.py' reads in all the .txt documents in the 'TEST' directory. The 'TEST' directory contains all the files in the corpus. 'build_entity_to_doc.py' then creates a pandas data frame with the entities across one axis and the indices of each doc on the other axis, which stores the number of times each entity appears in each document. A file named 'entity_to_doc.pkl' is created to hold this data frame.
@@ -7,8 +9,9 @@ The entity recognition is performed using two files: 'build_entity_to_doc.py' an
 'use_entity_to_doc.py' will read in 'entity_to_doc.pkl' and use it to return the entities most relevant to the specified document. The document is selected by setting the variable 'text_index' at the beginning of the script, to the index of the desired document. You should also make sure 'corp_size' is set to the currect number of files in the corpus, this is used to determine the percent of references of each entity to be expected in each documnet.
 
 In summary to use the Entity Recognition:
-1) run build_entity_to_doc.py -- builds the data frame with the number of references of each entity in each document
-2) run use_entity_to_doc.py -- finds the entities most relevant to the specified document
+1) Make sure you have 'en_core_web_sm' -- Command to download: "python -m spacy download en"
+2) run build_entity_to_doc.py -- builds the data frame with the number of references of each entity in each document
+3) run use_entity_to_doc.py -- finds the entities most relevant to the specified document
 
 Running Video Search:
 
