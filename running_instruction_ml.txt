@@ -17,3 +17,5 @@ The video search runs from the 'LDA.py' file
 It operates on the same .txt documents as the entity recognition and uses the same fucntionality to access them
 
 To run the video search , just run 'LDA.py'
+
+Note: everything is run in a virtual environment (we used pipenv)
